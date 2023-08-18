@@ -1,4 +1,3 @@
-
 "use client"
 import axios from "axios";
 import { useState, useEffect } from "react";
@@ -11,7 +10,7 @@ export function usePosts() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/posts");
+        const response = await axios.get("/api/blog");
         setPosts(response.data);
         setIsLoading(false);
       } catch (error) {

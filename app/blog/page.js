@@ -5,6 +5,8 @@ import { usePosts } from "../services/use-posts";
 const Posts = () => {
   const { posts, isLoading, isError } = usePosts();
 
+  console.log("posts", posts)
+
   return (
     <PageLayout>
       <div className="content-layout">
@@ -12,8 +14,8 @@ const Posts = () => {
           Blog Posts
         </h1>
         <ul>
-          {isError && <div>Error loading posts</div>}
           {isLoading && <div>Error loading posts</div>}
+          {isError && <div>Error loading posts</div>}
           {posts.map((post) => (
             <li key={post.id}>
               <a href={`/posts/${post.id}`}>{post.title}</a>
