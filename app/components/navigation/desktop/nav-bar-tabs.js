@@ -10,9 +10,11 @@ export const NavBarTabs = () => {
     <div className="nav-bar__tabs">
       <NavBarTab path="/profile" label="Profile" />
       <NavBarTab path="/public" label="Public" />
+      <NavBarTab path="/blog" label="blog" />
       {user && (
         <>
           <NavBarTab path="/protected" label="Protected" />
+          <NavBarTab path="/blog-editor" label="blog-editor" />
           <NavBarTab path="/admin" label="Admin" />
         </>
       )}
